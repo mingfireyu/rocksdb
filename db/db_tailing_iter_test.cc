@@ -220,8 +220,8 @@ TEST_F(DBTestTailingIterator, TailingIteratorTrimSeekToNext) {
   table_options.no_block_cache = true;
   table_options.block_cache_compressed = nullptr;
   options.table_factory.reset(NewBlockBasedTableFactory(table_options));
-  /*
   ReopenWithColumnFamilies({"default", "pikachu"}, options);
+  /*
   read_options.read_tier = kBlockCacheTier;
   std::unique_ptr<Iterator> iteri(db_->NewIterator(read_options, handles_[1]));
   char buf5[32];
