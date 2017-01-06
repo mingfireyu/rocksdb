@@ -5797,6 +5797,7 @@ Status DBImpl::CheckConsistency() {
                              ". Size recorded in manifest " +
                              ToString(md.size) + ", actual size " +
                              ToString(fsize) + "\n";
+      assert(fsize == md.size);
     }
   }
   if (corruption_messages.size() == 0) {
